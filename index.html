@@ -867,7 +867,11 @@ function openEnv(){
   var sl=document.getElementById('SL'); if(sl)sl.classList.add('gone');
   setTimeout(function(){var ef=document.getElementById('EF');if(ef)ef.classList.add('open');},350);
   setTimeout(function(){
-    ['LM','LG','LW'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.add('risen');});
+  ['LW'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.classList.add('risen');
+});
+    
   },750);
   setTimeout(showInv,4800);
 }
@@ -892,7 +896,10 @@ function goBack(){
   eOpen=false; scInited=false;
   var ef=document.getElementById('EF');if(ef)ef.classList.remove('open');
   var sl=document.getElementById('SL');if(sl)sl.classList.remove('gone');
-  ['LM','LG','LW'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('risen');});
+  ['LW'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.classList.add('risen');
+});
   var tc=document.querySelector('.TC');if(tc)tc.style.opacity='1';
   var sdno=document.getElementById('SDNO');if(sdno)sdno.classList.remove('on');
   var sc=document.getElementById('SCN');if(sc&&sc.getContext)sc.getContext('2d').clearRect(0,0,sc.width,sc.height);
