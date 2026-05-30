@@ -85,7 +85,12 @@ body {
 #LW { background:linear-gradient(160deg,#fefcf5,#faf3e0); border:1px solid rgba(180,145,55,0.30); }
 #LM.risen { opacity:1; animation:UPMH 1.0s cubic-bezier(0.34,1.2,0.64,1) 0.45s both; }
 #LG.risen { opacity:1; animation:UPGP 1.0s cubic-bezier(0.34,1.2,0.64,1) 0.52s both; }
-#LW.risen { opacity:1; animation:UPMN 1.0s cubic-bezier(0.34,1.2,0.64,1) 0.60s both; }
+
+#LW.risen {
+    opacity:1;
+    animation:UPMN 1.0s cubic-bezier(0.34,1.2,0.64,1) 0.60s both;
+    transform: translateY(-50px);
+}
 
 #EV { position:absolute; bottom:0; left:0; right:0; height:196px; z-index:20; touch-action:manipulation; }
 .EB { position:absolute; inset:0; background:linear-gradient(148deg,#fefaf0,#f8efd2,#f0e4ba,#e6d49e); border-radius:3px; box-shadow:0 18px 52px rgba(60,50,20,0.22),0 4px 12px rgba(60,50,20,0.12),inset 0 1px 0 rgba(255,255,255,0.84); }
