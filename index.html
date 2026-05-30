@@ -83,9 +83,27 @@ body {
 #LM { background:linear-gradient(155deg,#f5fff0,#e8fce0,#dcf5ca); border:1px solid rgba(55,130,38,0.30); }
 #LG { background:linear-gradient(155deg,#fffbee,#fef5d0,#fdedbe); border:1px solid rgba(210,148,20,0.34); }
 #LW { background:linear-gradient(160deg,#fefcf5,#faf3e0); border:1px solid rgba(180,145,55,0.30); }
-#LM.risen { opacity:1; animation:UPMH 1.0s cubic-bezier(0.34,1.2,0.64,1) 0.45s both; }
-#LG.risen { opacity:1; animation:UPGP 1.0s cubic-bezier(0.34,1.2,0.64,1) 0.52s both; }
-#LW.risen { opacity:1; animation:UPMN 1.0s cubic-bezier(0.34,1.2,0.64,1) 0.60s both; }
+  
+/* Main card */
+#LW.risen{
+  opacity:1;
+  z-index:30;
+  animation:UPMN 1s cubic-bezier(0.34,1.2,0.64,1) 0s both;
+}
+
+/* Mahavir card */
+#LM.risen{
+  opacity:1;
+  z-index:20;
+  animation:UPMH 1s cubic-bezier(0.34,1.2,0.64,1) 2s both;
+}
+
+/* Ganapati card */
+#LG.risen{
+  opacity:1;
+  z-index:10;
+  animation:UPGP 1s cubic-bezier(0.34,1.2,0.64,1) 4s both;
+}
 
 #EV { position:absolute; bottom:0; left:0; right:0; height:196px; z-index:20; touch-action:manipulation; }
 .EB { position:absolute; inset:0; background:linear-gradient(148deg,#fefaf0,#f8efd2,#f0e4ba,#e6d49e); border-radius:3px; box-shadow:0 18px 52px rgba(60,50,20,0.22),0 4px 12px rgba(60,50,20,0.12),inset 0 1px 0 rgba(255,255,255,0.84); }
@@ -250,7 +268,11 @@ body {
 @keyframes UPMH {
   0%   { opacity:0; bottom:0; transform:translateX(calc(-50% - 36px)) rotate(0deg); }
   10%  { opacity:1; }
-  100% { opacity:1; bottom:210px; transform:translateX(calc(-50% - 36px)) rotate(-5deg); }
+  100% {
+  opacity:1;
+  bottom:210px;
+  transform:translateX(-50%);
+}
 }
 @-webkit-keyframes UPGP {
   0%   { opacity:0; bottom:0; -webkit-transform:translateX(calc(-50% + 28px)) rotate(0deg); }
@@ -260,7 +282,11 @@ body {
 @keyframes UPGP {
   0%   { opacity:0; bottom:0; transform:translateX(calc(-50% + 28px)) rotate(0deg); }
   10%  { opacity:1; }
-  100% { opacity:1; bottom:175px; transform:translateX(calc(-50% + 28px)) rotate(5deg); }
+  100% {
+  opacity:1;
+  bottom:190px;
+  transform:translateX(-50%);
+}
 }
 @-webkit-keyframes UPMN {
   0%   { opacity:0; bottom:0; -webkit-transform:translateX(-50%); }
@@ -270,7 +296,11 @@ body {
 @keyframes UPMN {
   0%   { opacity:0; bottom:0; transform:translateX(-50%); }
   10%  { opacity:1; }
-  100% { opacity:1; bottom:205px; transform:translateX(-50%); }
+  100% {
+  opacity:1;
+  bottom:230px;
+  transform:translateX(-50%);
+}
 }
 @-webkit-keyframes FIN { from{opacity:0;} to{opacity:1;} }
 @keyframes FIN { from{opacity:0;} to{opacity:1;} }
